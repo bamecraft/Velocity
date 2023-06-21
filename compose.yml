@@ -3,7 +3,7 @@ services:
   TEMPLATE:
     build:
       context: .
-    container_name: TEMPLATE
+    container_name: velocity
     restart: unless-stopped
     volumes:
       - ./server:/server
