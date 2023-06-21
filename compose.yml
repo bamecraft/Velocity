@@ -1,6 +1,6 @@
 version: "3"
 services:
-  TEMPLATE:
+  velocity:
     build:
       context: .
     container_name: velocity
