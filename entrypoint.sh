@@ -2,20 +2,17 @@
 
 # ---- BEGIN OF CONFIG SECTION ---- #
 
-# Tips:
-#   You can split value as variable
-#   e.g.
-#       minecraftVersion='1.19.4'
-#       artifactName=$(curl -fsSL -H 'accept: application/json' 'https://example.com/api/${minecraftVersion}/json' | jq -r '.artifacts[1].fileName')
-#       downloadUrl="https://example.com/download/${artifactName}"
+# Target Version
+velocityVersion="3.2.0-SNAPSHOT"
+buildNumber=`curl -s -X 'GET' -H 'accept: application/json' "https://api.papermc.io/v2/projects/velocity/versions/${velocityVersion}/builds" | jq '.builds[-1].build'`
 
 # Mandatory variables
-downloadUrl=""
-allocatedMemorySize=""
+downloadUrl="https://api.papermc.io/v2/projects/velocity/versions/${velocityVersion}/builds/${buildNumber}/downloads/velocity-${velocityVersion}-${buildNumber}.jar"
+allocatedMemorySize="1G"
 
 # Optional variables
 additionalJvmArguments=""
-additonalScriptPath=""
+additonalScriptPath="/server/sync.sh"
 
 # ----- END OF CONFIG SECTION ----- #
 
