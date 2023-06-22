@@ -11,4 +11,4 @@ git push origin HEAD:main
 cd ../
 git add --all
 git commit --message='Sync: local to remote 🔄'
-git push origin develop
+git push origin HEAD:develop
