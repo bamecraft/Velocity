@@ -8,7 +8,7 @@ buildNumber=`curl -s -X 'GET' -H 'accept: application/json' "https://api.papermc
 
 # Mandatory variables
 downloadUrl="https://api.papermc.io/v2/projects/velocity/versions/${velocityVersion}/builds/${buildNumber}/downloads/velocity-${velocityVersion}-${buildNumber}.jar"
-allocatedMemorySize="1G"
+allocatedMemorySize="256M"
 
 # Optional variables
 additionalJvmArguments=""
