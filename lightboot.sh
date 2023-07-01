@@ -3,4 +3,4 @@
 ./sync.sh
 
 cd ./server
-java -Xmx256M -Xms256M -jar ./server.jar nogui
+java -Xmx512M -Xms512M -jar ./server.jar nogui
