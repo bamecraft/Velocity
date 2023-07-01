@@ -1,4 +1,6 @@
 #!/bin/bash
 
 ./sync.sh
-java -Xmx128M -Xms128M -jar ./server/server.jar nogui
+
+cd ./server
+java -Xmx128M -Xms128M -jar ./server.jar nogui
