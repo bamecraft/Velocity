@@ -44,4 +44,4 @@ fi
 
 # Run server
 echo 'Booting server...'
-java -Xmx${allocatedMemorySize} -Xms${allocatedMemorySize} ${additionalJvmArguments} -jar server.jar nogui
+java -Xmx${allocatedMemorySize} ${additionalJvmArguments} -jar server.jar nogui
